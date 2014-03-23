@@ -1,0 +1,58 @@
+body {
+}
+
+p {
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+img {
+}
+
+strong {
+}
+
+li {
+	display:inline;
+}
+
+form {
+	position:absolute;
+	left:550px;
+	top: 100px;
+}
+
+select {
+}
+
+ul
+{
+	float:left;
+	width:100%;
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	text-align:center;
+}
+#headerMenu a
+{
+	float:left;
+	width:10em;
+	text-decoration:none;
+	color:white;
+	background-color:purple;
+	padding:0.2em 0.6em;
+	border-right:1px solid white;
+}
+
+#headerMenu a:hover
+{
+	background-color:red;
+}
