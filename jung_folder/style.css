@@ -8,6 +8,7 @@ h1 {
 }
 
 h2 {
+	padding:10px;
 }
 
 h3 {
@@ -19,7 +20,7 @@ img {
 strong {
 }
 
-li {
+#headerMenu li {
 	display:inline;
 }
 
@@ -52,7 +53,7 @@ ul
 #headerMenu a
 {
 	float:left;
-	width:10em;
+	width:8em;
 	text-decoration:none;
 	color:white;
 	background-color:purple;
