@@ -11,36 +11,59 @@
     <!--[if IE]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+	<script>
+
+	<!-- Code to accept and display user comments-->
+	<!-- Note that it displays only 5 most recent comments-->
 	
-	<style>
-      #map_canvas {
-        width: 500px;
-        height: 400px;
-      }
-    </style>
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script>
-      function initialize() {
-        var map_canvas = document.getElementById('map_canvas');
-        var map_options = {
-          center: new google.maps.LatLng(49.261, -123.253),
-          zoom: 14,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+	var count = 1;
+	var delta = 1;
+	
+        function test()
+        {
+		
+			var userInput = document.getElementById("userInput").value;
+		
+			if(count == 1) {
+					 document.getElementById("comment1").innerHTML=userInput;
+			}
+			if( count == 2) {
+				document.getElementById("comment2").innerHTML=userInput;
+			}
+			if( count == 3) {
+				document.getElementById("comment3").innerHTML=userInput;
+			}
+			if( count == 4) {
+				document.getElementById("comment4").innerHTML=userInput;
+			}
+			if( count == 5) {
+				document.getElementById("comment5").innerHTML=userInput;
+				count = 0;
+			}
+
+			count = count + delta;
         }
-        var map = new google.maps.Map(map_canvas, map_options)
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-	  
-    </script>
-	
-	
+
+  </script>
   </head>
+  
   <body>
-  		<h1>This is Speed Wi-Finder.</h1>
-		
-		
-		
-  		<div id="map_canvas"></div>
-		
+  	<h1>Speed Wi-Finder Project</h1>
+	<hr>
+	
+	<!-- Code to display text box, a button, and user comments-->
+	<input type="text" id="userInput" style="width: 250px;" => Enter your comment</input>
+    <button onclick="test()">Submit</button>
+	
+	<p>User comments displayed below: </p>
+	
+	<p id="comment1"></p>
+	<p id="comment2"></p>
+	<p id="comment3"></p>
+	<p id="comment4"></p>
+	<p id="comment5"></p>
+	
+
   </body>
 </html>
