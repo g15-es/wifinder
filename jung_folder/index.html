@@ -68,39 +68,57 @@
 	</select>
 
 </form>
-<button id="btnStart" type="button" onclick="btnStartClick()">Start Test</button>
-<div id="msg"></div>
+    <div id="prgs" style="float:left; margin-right:30px"></div>
+    <div id="msg" style="float:left;"></div>
+    <div style="clear:both;"><br /><button style="width:150px" id="btnStart" type="button" onclick="btnStartClick()">Share Speed</button><br /></div>
 <script type="text/javascript">
 	SomApi.account = "SOM533058fbbbf76";   //your API Key here
-	SomApi.domainName = "wifinder.net84.net";      //your domain or sub-domain here 
-	SomApi.config.sustainTime = 4; 
-	SomApi.onTestCompleted = onTestCompleted;
-	SomApi.onError = onError;
+	SomApi.domainName = "wifinder.net84.net";      //your domain or sub-domain here
+        SomApi.onTestCompleted = onTestCompleted;
+        SomApi.onError = onError;
+        SomApi.onProgress = onProgress;
 
-	var msgDiv = document.getElementById("msg");
-	
-	function btnStartClick() {
-		msgDiv.innerHTML = "<h3>Speed test in progress. Please wait...</h3>";
-		SomApi.startTest();
-	}
-	
-	function onTestCompleted(testResult) {
-		msgDiv.innerHTML = 
-		"<h3>"+
-			"Download: "   +testResult.download +"Mbps <br/>"+
-			"Upload: "     +testResult.upload   +"Mbps <br/>"+
-			"Latency: "    +testResult.latency  +"ms <br/>"+
-			"Jitter: "     +testResult.jitter   +"ms <br/>"+
-			"Test Server: "+testResult.testServer +"<br/>"+
-			"IP: "         +testResult.ip_address +"<br/>"+
-			"Hostname: "   +testResult.hostname +"<br/>"+
-		"</h3>";
-	}
-	
-	function onError(error) {
-		msgDiv.innerHTML = "Error "+ error.code + ": "+error.message;
-	}
+        var msgDiv = document.getElementById("msg");
+        var prgsDiv = document.getElementById("prgs");
+
+        function btnStartClick() {
+            //set config values
+	    SomApi.config.sustainTime = 3;
+            SomApi.config.testServerEnabled = true;
+            SomApi.config.userInfoEnabled = false;
+            SomApi.config.latencyTestEnabled = true;
+            SomApi.config.uploadTestEnabled = true;
+            SomApi.config.progress.enabled = true;
+            SomApi.config.progress.verbose = true;
+
+            msgDiv.innerHTML = "<h3>--------------- Test Result ---------------</h3><h4>" +
+                "Speed test in progress. Please wait...</h4>";
+            SomApi.startTest();
+        }
+
+        function onTestCompleted(testResult) {
+            msgDiv.innerHTML = "<h3>--------------- Test Result ---------------</h3><h4>" +
+                "Download: " + testResult.download + " Mbps <br/>" +
+                "Upload: " + testResult.upload + " Mbps <br/>" +
+                "Latency: " + testResult.latency + " ms <br/>" +
+                "Test Server: " + testResult.testServer + "<br/>" +
+                "</h4>";
+}        
+
+        function onError(error) {
+            msgDiv.innerHTML = "Error " + error.code + ": " + error.message;
+        }
+
+        function onProgress(progress) {
+            prgsDiv.innerHTML =
+            "<h3>--------------- Progress ---------------</h3><h4>" +
+                "Progress Type: " + progress.type + "<br/>" +
+                "Pass: " + progress.pass + "<br/>" +
+                "Percent Done: " + progress.percentDone + "% <br/>" +
+                "Current Speed: " + progress.currentSpeed + " Mbps <br/>" +
+            "</h4>";
+        }
 </script>
 		
   </body>
-</html>
+</html>	

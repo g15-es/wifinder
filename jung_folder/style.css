@@ -35,7 +35,7 @@ strong {
 {
 	position:absolute;
 	left:550px;
-	top: 100px;
+	top: 120px;
 }
 
 #contactForm
@@ -85,4 +85,11 @@ ul
 #speedtest
 {
 	left:550px;
+}
+
+#btnStart
+{
+	position:absolute;
+	left:550px;
+	top: 440px;
 }
