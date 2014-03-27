@@ -34,7 +34,7 @@ strong {
 #reviewForm
 {
 	position:absolute;
-	left:550px;
+	left:450px;
 	top: 120px;
 }
 
@@ -82,14 +82,9 @@ ul
 	background-color:red;
 }
 
-#speedtest
-{
-	left:550px;
-}
-
 #btnStart
 {
 	position:absolute;
-	left:550px;
+	left:450px;
 	top: 440px;
 }
