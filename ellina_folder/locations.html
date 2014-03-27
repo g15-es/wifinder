@@ -9,26 +9,33 @@
     <title>Speed Wi-Finder | Home</title>
     
 	<script src="http://speedof.me/api/api.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="style.css">
+    	<link rel="stylesheet" href="style.css">
  
  	<script >
  
- 		 function submitUserInfo() {
-		 
-		 		  var userSpecifiedName = document.getElementById("userName").value;
-				  var userSpecifiedComment = document.getElementById("userComment").value;
+	 function submitUserInfo(form) {
+   		  	
+		var userBuildingIndex = form.list.selectedIndex;
+		document.getElementById("chosenBuilding").innerHTML= "You chose buiding # " + userBuildingIndex;
+
+		var userSpecifiedName = document.getElementById("userName").value;
+		var userSpecifiedComment = document.getElementById("userComment").value;
 				  
-				  document.getElementById("name1").innerHTML= userSpecifiedName;
-				  document.getElementById("comment1").innerHTML= userSpecifiedComment;
+		document.getElementById("name1").innerHTML= "Your name: " + userSpecifiedName;
+		document.getElementById("comment1").innerHTML= "Your Comment: " + userSpecifiedComment;
+
+		//alert (form.list.selectedIndex);
+
+	}
+
+ 	//function submitUserName() {	
+		//var userSpecifiedName = document.getElementById("userName").value;
+		//var userSpecifiedComment = document.getElementById("userComment").value;	  
+		//document.getElementById("name1").innerHTML= userSpecifiedName;
+		//document.getElementById("comment1").innerHTML= userSpecifiedComment;	 
+	//}
 		 
-		 }
-		 
- 
- 		 function testSelect(form) {
-   		  		  alert (form.list.selectedIndex);
-		  }
- 
- 		</script>
+ 	</script>
  
   </head>
   <body>
@@ -82,37 +89,39 @@
 		
 	<!-- User Name and Comments -->
 	
-    <p>Name:</p>
-    <p><input type="text" id="userName" ></p>
+    	<p>Name:</p>
+    	<p><input type="text" id="userName" ></p>
 	
 	<p>Comments: </p>
-    <p><textarea id="userComment" rows="5" cols="20"></textarea></p>
+   	<p><textarea id="userComment" rows="5" cols="20"></textarea></p>
 	
-	<button onclick="submitUserInfo()">Submit</button>
+	
+	<!-- <button onclick="submitUserName()">Submit</button> -->
 	
 	<!--A form for buildings -->
 	
-<form id = "buildingForm" action="" method="get">
+	<form id = "buildingForm" action="" method="get">
 
-    <p>Your current building:</p>
-	<select name = "list">
-	<option ></option>
-	<option >Macleod</option>
-	<option >Hugh Dempster</option>
-	<option >The Sub</option>
-	<option >Kaiser</option>
-	<option >MacMillan</option>
-	<option >WOOD</option>
-	</select>
+  	  	<p>Your current building:</p>
+		<select name = "list">
+		<option ></option>
+		<option >Macleod</option>
+		<option >Hugh Dempster</option>
+		<option >The Sub</option>
+		<option >Kaiser</option>
+		<option >MacMillan</option>
+		<option >WOOD</option>
+		</select>
 	
-	<INPUT TYPE="button" NAME="button" Value="Your Building" onClick="testSelect(this.form)">
+		<INPUT TYPE="button" NAME="button" Value="Submit" onClick="submitUserInfo(this.form)">
 
-</form>
+	</form>
 
-	<p>User info will be displayed below: </p>
+	<p>Summary of user info (will be displayed below): </p>
 	
-	<p id="name1"></p>
-	<p id="comment1"></p>
+	<p id= "name1"></p>
+	<p id= "comment1"></p>
+	<p id= "chosenBuilding"></p>
 	
 	
 	<!-- Speed Test -->
