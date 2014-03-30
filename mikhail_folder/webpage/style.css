@@ -1,0 +1,90 @@
+body {
+}
+
+p {
+}
+
+h1 {
+	padding-left:10px;
+}
+
+h2 {
+	padding-top:50px;
+	padding-left:10px;
+}
+
+h3 {
+	padding-left:10px;
+}
+
+h4 {
+	padding-left:10px;
+}
+
+img {
+}
+
+strong {
+}
+
+#headerMenu li {
+	display:inline;
+}
+
+#reviewForm
+{
+	position:absolute;
+	left:450px;
+	top: 120px;
+}
+
+#contactForm
+{
+	position:absolute;
+	left:50px;
+	top: 120px;
+}
+
+select {
+}
+
+ul
+{
+	float:left;
+	width:100%;
+	padding:0;
+	padding-bottom:10px;
+	margin:0;
+	list-style-type:none;
+	text-align:center;
+}
+
+#developerList li
+{
+	padding-left:10px;
+	padding-bottom:2px;
+	text-align:left;
+}
+
+#headerMenu a
+{
+	float:left;
+	width:8em;
+	text-decoration:none;
+	color:white;
+	background-color:purple;
+	padding:0.2em 0.6em;
+	border-right:1px solid white;
+}
+
+#headerMenu a:hover
+{
+	background-color:red;
+}
+
+#btnStart
+{
+	position:absolute;
+	left:450px;
+	top: 440px;
+}
