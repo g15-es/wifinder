@@ -1,24 +1,25 @@
 body {
+min-width:900px;
 }
 
 p {
 }
 
 h1 {
-	padding-left:10px;
+	//padding-left:10px;
 }
 
 h2 {
 	padding-top:50px;
-	padding-left:10px;
+	//padding-left:10px;
 }
 
 h3 {
-	padding-left:10px;
+	//padding-left:10px;
 }
 
 h4 {
-	padding-left:10px;
+	//padding-left:10px;
 }
 
 img {
@@ -87,4 +88,23 @@ ul
 	position:absolute;
 	left:450px;
 	top: 440px;
+}
+
+#mainMap
+{
+	width="388px"; 
+	height="497px";
+}
+
+#prgs
+{
+position:absolute;
+top:600px;
+}
+
+#msg
+{
+position:absolute;
+top:530px;
+left:450px;
 }
