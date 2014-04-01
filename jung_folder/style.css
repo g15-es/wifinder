@@ -1,25 +1,27 @@
 body {
-min-width:900px;
+min-width:1000px;
+	font-family:Verdana, Geneva, sans-serif;
 }
 
 p {
 }
 
 h1 {
-	//padding-left:10px;
+	padding-left:10px;
+	font-family:Tahoma, Geneva, sans-serif;
 }
 
 h2 {
 	padding-top:50px;
-	//padding-left:10px;
+	padding-left:50px;
 }
 
 h3 {
-	//padding-left:10px;
+	padding-left:50px;
 }
 
 h4 {
-	//padding-left:10px;
+	padding-left:50px;
 }
 
 img {
@@ -36,14 +38,14 @@ strong {
 {
 	position:absolute;
 	left:450px;
-	top: 120px;
+	top:120px;
 }
 
 #contactForm
 {
-	position:absolute;
+	position:relative;
 	left:50px;
-	top: 120px;
+	top:20px;
 }
 
 select {
@@ -62,7 +64,7 @@ ul
 
 #developerList li
 {
-	padding-left:10px;
+	padding-left:50px;
 	padding-bottom:2px;
 	text-align:left;
 }
@@ -70,12 +72,13 @@ ul
 #headerMenu a
 {
 	float:left;
-	width:8em;
+	width:11em;
 	text-decoration:none;
 	color:white;
-	background-color:purple;
+	background-color:rgb(90,0,90);
 	padding:0.2em 0.6em;
 	border-right:1px solid white;
+	font-family:Verdana, Geneva, sans-serif;
 }
 
 #headerMenu a:hover
@@ -87,13 +90,116 @@ ul
 {
 	position:absolute;
 	left:450px;
-	top: 440px;
+	top: 430px;
 }
 
-#mainMap
+p.intro
 {
-	width="388px"; 
-	height="497px";
+	font-family:Verdana, Geneva, sans-serif;
+	position:relative;
+	left:450px;
+	top:-480px;
+}
+
+div.footnote
+{
+	background-color:rgb(90,0,90); /* dark purple */
+	position:relative;
+        top:50px;
+        min-width:983px;
+        max-width:983px;
+}
+
+p.footnote
+{
+	font-family:Verdana, Geneva, sans-serif;
+	color:rgb(192,192,192);
+	padding:25px 50px;
+}
+
+div.footnoteHome
+{
+	background-color:rgb(90,0,90); /*dark purple */
+	position:relative;
+	top:-240px;
+        min-width:983px;
+        max-width:983px;
+}
+
+div.speedOf
+{
+	position:relative;
+	left:50px;
+        top:15px;
+}
+
+p.feedback
+{
+	position:relative;
+	left:50px;
+        top:15px;
+}
+
+#buildingFormHome
+{
+	position:relative;
+	left:450px;
+	top:-225px;
+}		
+
+table td:nth-child(1)
+{
+width:150px;
+}		
+
+table.ranks td:nth-child(1)
+{
+width:300px;
+}		
+
+table.ranks td:nth-child(2)
+{
+width:300px;
+}
+
+table td:nth-child(2)
+{
+width:550px;
+max-width:550px;
+}
+
+table td:nth-child(3)
+{
+width:100px;
+}
+
+table td:nth-child(4)
+{
+width:100px;
+}
+
+table
+{
+position:relative;
+left:50px;
+    text-align:center; 
+    vertical-align:middle;
+word-wrap:break-word;
+//table-layout:fixed;
+width:900px;
+//border:1px solid;
+  border-collapse: collapse;
+}
+
+table.ranks
+{
+position:relative;
+left:50px;
+    text-align:left; 
+    vertical-align:middle;
+word-wrap:break-word;
+//table-layout:fixed;
+width:650px;
 }
 
 #prgs
@@ -105,6 +211,16 @@ top:600px;
 #msg
 {
 position:absolute;
-top:530px;
-left:450px;
+top:540px;
+left:410px;
+}
+td, th 
+{
+  border: solid 1px black;
+  padding: 0.5rem;
+}
+textarea 
+{
+   resize: none;
+width: 500px;
 }
